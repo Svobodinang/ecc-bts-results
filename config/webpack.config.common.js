@@ -47,7 +47,7 @@ module.exports = ({ src = '', dist = '', isProd = false }) => ({
         rules: [
             pug(isProd),
             images,
-            fonts
+            fonts,
         ]
     },
     plugins: getPlugins(isProd)

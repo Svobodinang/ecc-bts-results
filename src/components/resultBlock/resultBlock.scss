@@ -1,0 +1,97 @@
+#tpl {
+    .result-block {
+        width: rem(1162);
+        max-width: 100%;
+        color: $color-light;
+        display: flex;
+        gap: rem(43);
+        border: 3px solid $color-light;
+        border-radius: 9px;
+        padding: 0 rem(27) rem(34) rem(9);
+
+        @media (--viewport-portrait-layout) {
+            width: 100%;
+            gap: rem(30, true);
+            padding: 0 rem(24, true) rem(36, true);
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__img-block {
+            flex-shrink: 0;
+            flex-grow: 1;
+            background-color: $color-light;
+            width: rem(182);
+            height: rem(199);
+            padding: rem(20) rem(12) rem(12);
+            position: relative;
+            transform: rotate(-6deg);
+
+            @media (--viewport-portrait-layout) {
+                width: rem(191, true);
+                height: rem(208, true);
+                padding: rem(20, true) rem(12, true) rem(12, true);
+                transform: rotate(-7deg);
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-image: url("~assets/images/tape.png");
+                background-size: cover;
+                top: rem(-27);
+                left: rem(9);
+                width: rem(43);
+                height: rem(51);
+
+                @media (--viewport-portrait-layout) {
+                    width: rem(45, true);
+                    height: rem(53, true);
+                    top: rem(-28, true);
+                    left: rem(10, true);
+                }
+            }
+        }
+
+        &__img {
+            width: rem(158);
+            height: rem(167);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @media (--viewport-portrait-layout) {
+                width: rem(165, true);
+                height: rem(175, true);
+            }
+        }
+
+        &__text-block {
+            margin-top: rem(35);
+            text-align: left;
+
+            @media (--viewport-portrait-layout) {
+                margin-top: 0;
+            }
+        }
+
+        &__name {
+            font-size: rem(22);
+            margin-bottom: rem(20);
+            font-weight: 700;
+            font-family: $font-main;
+
+            @media (--viewport-portrait-layout) {
+                font-size: rem(20, true);
+                margin-bottom: rem(17, true);
+            }
+        }
+
+        &__text {
+            font-family: $font-main;
+
+            @media (--viewport-portrait-layout) {
+                line-height: 1.4;
+            }
+        }
+    }
+}

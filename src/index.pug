@@ -1,10 +1,13 @@
 article#tpl
     include components/meta.pug
+        include components/resultBlock/resultBlock.pug
     
-    .quiz-wrapper#quizWrapper
-        .question-6-back(aria-hidden)
-            .question-6-back__desk(aria-hidden)
-                .question-6-back__checkbox-results-wrapper#checkboxResultsWrapper
-        .quiz-content#quizContent
+    .quiz-results
+        .quiz-results__content
+            h1.quiz-results__title
+            p.quiz-results__subtitle!=data.subtitle
+            .quiz-results__results
+                each resultBlockData in data.results
+                    +resultBlock(resultBlockData)
 
 

@@ -1,0 +1,7 @@
+mixin resultBlock(blockData)
+    .result-block
+        .result-block__img-block
+            img.result-block__img(src=`~assets/images/${blockData.img.filename}` alt=blockData.img.alt)
+        .result-block__text-block
+            p.result-block__name!=blockData.name
+            p.result-block__text!=blockData.text
